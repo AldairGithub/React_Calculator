@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './NumberGroup.css'
+
 import Number from '../number/Number'
 
 export default function NumberGroup(props) {
@@ -9,14 +11,16 @@ export default function NumberGroup(props) {
 
   return (
     <>
-      {numbers.map(num => (
-        <>
-          <Number
-            number={num}
-            handleInputClick={handleInputClick}
-          />
-        </>
-      ))}
+      <div className='numbers-container'>
+        {numbers.map(num => (
+          <div className={num === 0 && 'item-zero'}>
+            <Number
+              number={num}
+              handleInputClick={handleInputClick}
+            />
+          </div>
+        ))}
+      </div>
     </>
   )
 } 

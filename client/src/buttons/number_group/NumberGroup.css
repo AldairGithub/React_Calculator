@@ -1,0 +1,10 @@
+.numbers-container {
+  display: grid;
+  grid-template-columns: repeat(3, 15px);
+  grid-template-rows: repeat(3, 15px) ;
+  gap: 45px;
+  align-content: flex-end;
+}
+.item-zero {
+  grid-column: 2/3;
+}
