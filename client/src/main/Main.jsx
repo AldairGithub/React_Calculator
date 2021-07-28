@@ -1,6 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+
+import './Main.css'
 
 import Display from '../display/Display'
+import Bonus from '../buttons/bonus/Bonus'
 import Operators from '../buttons/operators/Operators'
 import NumberGroup from '../buttons/number_group/NumberGroup'
 
@@ -53,6 +56,16 @@ export default function Main() {
           parseInt(firstInput) / parseInt(secondInput)
         )
         break;
+      case "^":
+        setResult(
+          Math.pow(firstInput, secondInput)
+        )
+        break;
+      case "%":
+        setResult(
+          parseInt(firstInput) % parseInt(secondInput)
+        )
+        break;
       default:
         break
     }
@@ -74,14 +87,25 @@ export default function Main() {
         secondInput={secondInput}
         getResult={getResult}
         result={result}
-        reset={reset}
       />
-      <Operators
-        handleOperatorClick={handleOperatorClick}
-      />
-      <NumberGroup
-        handleInputClick={handleInputClick}
-      />
+      <div className='main-buttons-container'>
+        <div>
+          <Bonus
+            reset={reset}
+            handleOperatorClick={handleOperatorClick}
+          />
+          <NumberGroup
+            handleInputClick={handleInputClick}
+          />
+        </div>
+        <Operators
+          reset={reset}
+          getResult={getResult}
+          handleOperatorClick={handleOperatorClick}
+        />
+      </div>
+
+
     </>
   )
 }

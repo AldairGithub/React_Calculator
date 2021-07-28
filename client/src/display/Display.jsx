@@ -5,9 +5,7 @@ export default function Display(props) {
     firstInput,
     operator,
     secondInput,
-    result,
-    getResult,
-    reset
+    result
   } = props
 
   return (
@@ -17,9 +15,7 @@ export default function Display(props) {
         {operator}
         {secondInput}
       </p>
-      <button onClick={getResult}>=</button>
       <p>{result}</p>
-      <button onClick={reset}>reset</button>
     </>
   )
 }

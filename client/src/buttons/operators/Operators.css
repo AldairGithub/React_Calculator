@@ -1,0 +1,13 @@
+.operators-container {
+  display: grid;
+  gap: 10px;
+}
+.operators-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #FF9500;
+  color: #FFFF;
+  font-size: 20px;
+}
