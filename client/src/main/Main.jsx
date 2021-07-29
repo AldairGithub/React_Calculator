@@ -30,8 +30,10 @@ export default function Main() {
   }
 
   const handleOperatorClick = (x) => {
-    setOperator(x)
-    setOperatorPresent(true)
+    if (firstInput) {
+      setOperator(x)
+      setOperatorPresent(true)  
+    }
   }
 
   const getResult = () => {
@@ -80,14 +82,15 @@ export default function Main() {
   }
   return (
     <>
-      <h1>This is the main component</h1>
-      <Display
-        firstInput={firstInput}
-        operator={operator}
-        secondInput={secondInput}
-        getResult={getResult}
-        result={result}
-      />
+      <h1 className='main-title'>React Calculator</h1>
+      <div className='main-container'>
+        <Display
+          firstInput={firstInput}
+          operator={operator}
+          secondInput={secondInput}
+          getResult={getResult}
+          result={result}
+        />
       <div className='main-buttons-container'>
         <div>
           <Bonus
@@ -104,8 +107,7 @@ export default function Main() {
           handleOperatorClick={handleOperatorClick}
         />
       </div>
-
-
+      </div>
     </>
   )
 }
