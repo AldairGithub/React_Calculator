@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Display.css'
+
 export default function Display(props) {
   const {
     firstInput,
@@ -10,12 +12,16 @@ export default function Display(props) {
 
   return (
     <>
-      <p>
-        {firstInput}
-        {operator}
-        {secondInput}
-      </p>
-      <p>{result}</p>
+      <div className='display-container'>
+        <div className='display-input'>
+          <p>
+            {firstInput}
+            {operator}
+            {secondInput}
+          </p>
+        </div>
+        <p>{result}</p>
+      </div>
     </>
   )
 }
