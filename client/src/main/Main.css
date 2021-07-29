@@ -1,0 +1,18 @@
+.main-container {
+  background-color: #1C1C1C;
+  padding: 12px;
+  width: 300px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.main-title {
+  font-weight: 300;
+}
+.main-buttons-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 12px;
+  gap: 10px;
+}
